@@ -1,8 +1,9 @@
+
 function Header({ buttons }) {
     return (
         <>
         <header>
-            <h1 className='title'>Mish's Website</h1>
+            <h1 className='title'>Khalid Mustafa Al-Roubaie</h1>
             <div className="button-container">
                 {buttons.map((buttonName, index) => (
                     <button key={index} className="headerbutton">
@@ -14,5 +15,6 @@ function Header({ buttons }) {
         </>
     );
 }
+
 
 export default Header;
