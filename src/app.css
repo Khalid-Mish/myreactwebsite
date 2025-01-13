@@ -1,32 +1,88 @@
+/* Header */
 header {
-    border: solid black;
-    text-align: center;          /* Center the title and buttons horizontally */
-    padding: 20px 0;             /* Add padding for spacing */
-    background-color: #f4f4f4;   /* Optional: background color */
+    background: linear-gradient(135deg, #c62828, #f57c00); /* Dark red to dark orange */
+    text-align: center;
+    padding: 40px 0;  /* Increase padding for more space */
+    border-bottom: 2px solid #ddd; /* Add a subtle border at the bottom */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow effect */
 }
 
 .title {
-    font-family: Arial, Helvetica, sans-serif;
-    font-size: px;             /* Adjust font size for the title */
-    margin-bottom: 20px;         /* Add space between the title and buttons */
+    font-family: 'Roboto', sans-serif;
+    font-size: 36px;  /* Increase font size */
+    font-weight: 700;  /* Bold title */
+    color: white;  /* White color for title text */
+    margin-bottom: 20px;
 }
 
 .button-container {
-    display: flex;               /* Enable Flexbox for buttons */
-    justify-content: space-evenly; /* Distribute buttons evenly */
-    gap: 10px;                   /* Optional: Add space between buttons */
+    display: flex;
+    justify-content: center;  /* Center buttons horizontally */
+    gap: 20px;  /* Add a larger gap between buttons */
+    margin-top: 20px;
 }
 
 .headerbutton {
-    padding: 10px 20px;          /* Add padding for button size */
-    border: none;                /* Remove default button border */
-    background-color: #007BFF;   /* Button background color */
-    color: white;                /* Button text color */
-    cursor: pointer;             /* Change cursor on hover */
-    border-radius: 5px;          /* Optional: Round corners */
-    text-align: center;          /* Center text inside buttons */
+    padding: 12px 30px;  /* Larger padding for buttons */
+    font-size: 16px;  /* Slightly larger font for readability */
+    border: none;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    border-radius: 8px;  /* More rounded buttons */
+    transition: background-color 0.3s ease, transform 0.2s ease;  /* Smooth transitions */
+    font-family: 'Arial', sans-serif;
 }
 
 .headerbutton:hover {
-    background-color: #0056b3;   
+    background-color: #0056b3;
+    transform: scale(1.05);  /* Slightly enlarge button on hover */
+}
+
+.headerbutton:active {
+    transform: scale(0.98);  /* Slightly shrink on button click */
+}
+
+/* Page Content */
+.page-content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+}
+
+.page-content > div {
+    max-width: 800px;
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+}
+
+h2 {
+    font-family: 'Roboto', sans-serif;
+    font-size: 28px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+p {
+    font-size: 18px;
+    color: #555;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .button-container {
+        flex-direction: column;  /* Stack buttons vertically on small screens */
+    }
+
+    .headerbutton {
+        width: 100%;
+        margin-bottom: 10px;
+    }
 }
