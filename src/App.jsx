@@ -3,6 +3,7 @@ import Toggle from "./assets/toggle";
 
 function App() {
     const buttonNames = ['Home', 'About Me', 'My Blog', 'Contact Me'];
+    let currentPage = 'Home';
 
     return (
         <>

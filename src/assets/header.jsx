@@ -7,6 +7,7 @@ function Header({ buttons }) {
             <div className="button-container">
                 {buttons.map((buttonName, index) => (
                     <button key={index} className="headerbutton">
+                        
                         {buttonName}
                     </button>
                 ))}
